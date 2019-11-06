@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Taraka United Church Trumpet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/geo.js"></script>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+    <div class="grid">
+        <header class="header">
+            <i class="fas fa-bars header__menu"></i>
+            <div class="header__search">
+                <input class="header__input" placeholder="Search..." />
+            </div>
+            <div class="header__avatar">
+                <div class="dropdown">
+                    <ul class="dropdown__list">
+                        <li class="dropdown__list-item">
+                            <span class="dropdown__icon"><i class="far fa-user"></i></span>
+                            <span class="dropdown__title">my profile</span>
+                        </li>
+                        <li class="dropdown__list-item">
+                            <span class="dropdown__icon"><i class="fas fa-clipboard-list"></i></span>
+                            <span class="dropdown__title">my account</span>
+                        </li>
+                        <li class="dropdown__list-item">
+                            <span class="dropdown__icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="dropdown__title">log out</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidenav">
+            <div class="sidenav__brand">
+                <i class="fas fa-feather-alt sidenav__brand-icon"></i>
+                <a class="sidenav__brand-link" href="#">TUC<span class="text-light">TRUMPET</span></a>
+                <i class="fas fa-times sidenav__brand-close"></i>
+            </div>
+            <div class="sidenav__profile">
+                <div class="sidenav__profile-avatar">
+                </div>
+                <div class="sidenav__profile-title text-light">TARAKA TRUMPET</div>
+            </div>
+            <div class="row row--align-v-center row--align-h-center">
+                <ul class="navList">
+
+                    <li class="navList__heading">About Trumpet<i class="fas fa-chart-bar"></i></li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
+                            <span class="navList__subheading-title">Leaders</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item"><a data-target="#pastorModal" data-toggle="modal">Pastor's
+                                    Message</a>
+                            </li>
+                            <li class="subList__item"><a data-target="#chairmanModal" data-toggle="modal">Chairman's
+                                    Message</a></li>
+                            <li class="subList__item"><a data-target="#leadersModal" data-toggle="modal">Leaders</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-phone"></i></span>
+                            <span class="navList__subheading-title">Statistics</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">NGI</li>
+                            <li class="subList__item">Gulf</li>
+                            <li class="subList__item">Milne Bay</li>
+                            <li class="subList__item">Mix</li>
+                        </ul>
+                    </li>
+
+
+                    <li class="navList__heading">Events<i class="fas fa-calendar-alt"></i></li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-wine-glass-alt"></i></span>
+                            <span class="navList__subheading-title">Coming</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">past</li>
+                            <li class="subList__item">present</li>
+                            <li class="subList__item">future</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-school"></i></span>
+                            <span class="navList__subheading-title">Planned</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">Tithes and Offerings</li>
+                            <li class="subList__item">Preaching Plan</li>
+                            <li class="subList__item">Exceptions</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="navList__subheading row row--align-v-center">
+                            <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
+                            <span class="navList__subheading-title">Congregation</span>
+                        </div>
+                        <ul class="subList subList--hidden">
+                            <li class="subList__item">tech</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main">
+            <div class="main-header">
+                <div class="main-header__intro-wrapper">
+                    <div class="main-header__welcome">
+                        <div class="main-header__welcome-title text-light">Welcome, <strong>The Taraka Trumpet</strong>
+                        </div>
+                        <div class="main-header__welcome-subtitle text-light">Toktok Save Ikam lo Taraka Trumpet!
+                        </div>
+                    </div>
+                    <div class="quickview">
+                        <div class="quickview__item">
+                            <div class="quickview__item-total">41</div>
+                            <div class="quickview__item-description">
+                                <i class="far fa-calendar-alt"></i>
+                                <span class="text-light">Events</span>
+                            </div>
+                        </div>
+                        <div class="quickview__item">
+                            <div class="quickview__item-total">64</div>
+                            <div class="quickview__item-description">
+                                <i class="far fa-comment"></i>
+                                <span class="text-light">Messages</span>
+                            </div>
+                        </div>
+                        <div class="quickview__item">
+                            <div class="quickview__item-total">27&deg;</div>
+                            <div class="quickview__item-description">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="text-light">Papua New Guinea</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-overview">
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--document">
+                        <i class="far fa-file-alt"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light"><strong><i>Decmeber</i> Pamphlet</strong></h3>
+                        <a class='btn btn-info btn-md' href="pdfs/trumpet-6.pdf">
+                            <p class="overviewCard-subtitle">View It</p>
+                        </a>
+
+
+
+                    </div>
+                </div>
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--calendar">
+                        <i class="far fa-calendar-check"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">Upcoming <strong>Programs</strong></h3>
+                        <p class="overviewCard-subtitle">Post here please</p>
+                    </div>
+                </div>
+
+                <div class="overviewCard">
+                    <div class="overviewCard-icon overviewCard-icon--photo">
+                        <i class="far fa-file-image"></i>
+                    </div>
+                    <div class="overviewCard-description">
+                        <h3 class="overviewCard-title text-light">General <strong>Toksave</strong></h3>
+                        <p class="overviewCard-subtitle">Needs updating</p>
+                    </div>
+                </div>
+            </div> <!-- /.main__overview -->
+            <div class="main__cards">
+                <div class="card">
+                    <div class="card__header">
+                        <div class="card__header-title text-light">Weekly <strong>Events</strong>
+                            <a href="#" class="card__header-link text-bold">View All</a>
+                        </div>
+                        <div class="settings">
+                            <div class="settings__block"><i class="fas fa-edit"></i></div>
+                            <div class="settings__block"><i class="fas fa-cog"></i></div>
+                        </div>
+                    </div>
+                    <div class="card__main">
+                        <div class="card__row">
+                            <div class="card__icon"><i class="fas fa-gift"></i></div>
+                            <div class="card__time">
+                                <div>Monday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Fellowship</div>
+                                <div class="card__description">At 8:30pm.</div>
+                                <div class="card__note">Until 9pm</div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__icon"><i class="fas fa-plane"></i></div>
+                            <div class="card__time">
+                                <div>Tuesday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Male Fellowsip</div>
+                                <div class="card__description">Starting 7:30pm</div>
+                                <div class="card__note">Led by Mr Kaina</div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__icon"><i class="fas fa-book"></i></div>
+                            <div class="card__time">
+                                <div>Thursday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">NGI Fellowship</div>
+                                <div class="card__description">Fellowship starting at 7:30pm and finishing with choir
+                                    practice.
+                                    Hawking</div>
+                                <div class="card__note">Drop off</div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__icon"><i class="fas fa-heart"></i></div>
+                            <div class="card__time">
+                                <div>Friday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Milne Bay Fellowship</div>
+                                <div class="card__description">Join us.
+                                </div>
+                                <div class="card__note">6:45pm, Church grounds</div>
+                            </div>
+                        </div>
+                        <div class="card__row">
+                            <div class="card__icon"><i class="fas fa-heart"></i></div>
+                            <div class="card__time">
+                                <div>Saturday</div>
+                            </div>
+                            <div class="card__detail">
+                                <div class="card__source text-bold">Clean up</div>
+                                <div class="card__description">See rooster</div>
+                                <div class="card__note">11:00pm</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <div class="card__header-title text-light">Past Trumpet <strong>Publications</strong>
+                            <!--<a href="#" class="card__header-link text-bold">View All</a>-->
+
+                        </div>
+                        <div class="settings">
+                            <div class="settings__block"><i class="fas fa-edit"></i></div>
+                            <div class="settings__block"><i class="fas fa-cog"></i></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="documents">
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title"><a href="pdfs/trumpet-1.pdf"
+                                        class='btn btn-danger btn-sm'>Trumpet-1</a href="pdfs/trumpet-1.pdf"
+                                        class='btn btn-default btn-sm'></div>
+                                <div class="document__date">07/16/2018</div>
+                            </div>
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title"><a href="pdfs/trumpet-2.pdf"
+                                        class='btn btn-success btn-sm'>Trumpet-2</a href="pdfs/trumpet-1.pdf"
+                                        class='btn btn-default btn-sm'></div>
+                                <div class="document__date">09/04/2018</div>
+                            </div>
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title"><a href="pdfs/trumpet-3.pdf"
+                                        class='btn btn-info btn-sm'>Trumpet-3</a href="pdfs/trumpet-1.pdf"
+                                        class='btn btn-default btn-sm'></div>
+                                <div class="document__date">10/10/2018</div>
+                            </div>
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title"><a href="pdfs/trumpet-4.pdf"
+                                        class='btn btn-primary btn-sm'>Trumpet-4</a href="pdfs/trumpet-1.pdf"
+                                        class='btn btn-default btn-sm'></div>
+                                <div class="document__date">11/01/2018</div>
+                            </div>
+                            <div class="document">
+                                <div class="document__img"></div>
+                                <div class="document__title"><a href="pdfs/trumpet-5.pdf"
+                                        class='btn btn-warning btn-sm'>Trumpet-5</a href="pdfs/trumpet-1.pdf"
+                                        class='btn btn-default btn-sm'></div>
+                                <div class="document__date">11/01/2018</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card--finance">
+                    <div class="card__header">
+                        <div class="card__header-title text-light">Church <strong>Tithes and Offerings</strong>
+                            <a href="#" class="card__header-link text-bold">View All</a>
+                        </div>
+                        <div class="settings">
+                            <div class="settings__block"><i class="fas fa-edit"></i></div>
+                            <div class="settings__block"><i class="fas fa-cog"></i></div>
+                        </div>
+                    </div>
+                    <div id="chartdiv"></div>
+                </div>
+            </div> <!-- /.main-cards -->
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+                View the Current Publication
+            </button>
+        </main>
+
+        <!-- Modal -->
+        <div class="modal fade" id="chairmanModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Mr Steven Hulamari</h4>
+                    </div>
+                    <div class="modal-body">
+                        Message goes here
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="pastorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Reverend Rau Vetali's Message</h4>
+                    </div>
+                    <div class="modal-body">
+                        Reverend's message will go here!!!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="leadersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="thumbnail">
+                                    <img src="..." alt="...">
+                                    <div class="caption">
+                                        <h3>Chairman</h3>
+                                        <p>...</p>
+                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#"
+                                                class="btn btn-default" role="button">Button</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="thumbnail">
+                                <img src="..." alt="...">
+                                <div class="caption">
+                                    <h3>Vice Chairman</h3>
+                                    <p>...</p>
+                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#"
+                                            class="btn btn-default" role="button">Button</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    insert contents heres.....
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <p><span class="footer__copyright">&copy;</span> nictconsuntants.com</p>
+        <p>Credit to <i class="fas fa-heart footer__icon"></i> by <a href="https://www.linkedin.com/in/matt-holland/"
+                target="_blank" class="footer__signature">Matt
+                H</a></p>
+    </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
