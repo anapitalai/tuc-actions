@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Taraka United Church Trumpet</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="js/geo.js"></script>
 
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap3/dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="node_modules/bootstrap3/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/amcharts/dist/amcharts/amcharts.js"></script>
+    <script src="node_modules/amcharts/dist/amcharts/serial.js"></script>
+    <script src="node_modules/amcharts/dist/amcharts/themes/light.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/bootstrap3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap3/dist/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -61,9 +64,11 @@
                     <li>
                         <div class="navList__subheading row row--align-v-center">
                             <span class="navList__subheading-icon"><i class="fas fa-credit-card"></i></span>
-                            <span class="navList__subheading-title">Leaders</span>
+                            <span class="navList__subheading-title">Executives</span>
                         </div>
                         <ul class="subList subList--hidden">
+                                <li class="subList__item"><a data-target="#editorModal" data-toggle="modal">Editor of the Trumpet</a>
+                                </li>
                             <li class="subList__item"><a data-target="#pastorModal" data-toggle="modal">Pastor's
                                     Message</a>
                             </li>
@@ -79,16 +84,19 @@
                             <span class="navList__subheading-title">Statistics</span>
                         </div>
                         <ul class="subList subList--hidden">
-                            <li class="subList__item">NGI</li>
+                            <li class="subList__item">
+                            </li>
                             <li class="subList__item">Gulf</li>
                             <li class="subList__item">Milne Bay</li>
                             <li class="subList__item">Mix</li>
+                            <li class="subList__item">Sunday School</li>
+                            <li class="subList__item">Youths</li>
                         </ul>
                     </li>
 
 
                     <li class="navList__heading">Events<i class="fas fa-calendar-alt"></i></li>
-                    <li>
+                    <!--<li>
                         <div class="navList__subheading row row--align-v-center">
                             <span class="navList__subheading-icon"><i class="fas fa-wine-glass-alt"></i></span>
                             <span class="navList__subheading-title">Coming</span>
@@ -109,14 +117,21 @@
                             <li class="subList__item">Preaching Plan</li>
                             <li class="subList__item">Exceptions</li>
                         </ul>
-                    </li>
+                    </li>-->
                     <li>
                         <div class="navList__subheading row row--align-v-center">
                             <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
-                            <span class="navList__subheading-title">Congregation</span>
+                            <span class="navList__subheading-title">Slide Show</span>
                         </div>
                         <ul class="subList subList--hidden">
-                            <li class="subList__item">tech</li>
+                            <li class="subList__item">
+
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                                    data-target="#slideshowModal">
+                                    Slides
+                                </button>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -163,7 +178,7 @@
                         <i class="far fa-file-alt"></i>
                     </div>
                     <div class="overviewCard-description">
-                        <h3 class="overviewCard-title text-light"><strong><i>Decmeber</i> Pamphlet</strong></h3>
+                        <h3 class="overviewCard-title text-light"><strong><i>Current</i> Publication</strong></h3>
                         <a class='btn btn-info btn-md' href="pdfs/trumpet-6.pdf">
                             <p class="overviewCard-subtitle">View It</p>
                         </a>
@@ -329,10 +344,6 @@
                 </div>
             </div> <!-- /.main-cards -->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
-                View the Current Publication
-            </button>
         </main>
 
         <!-- Modal -->
@@ -345,7 +356,22 @@
                         <h4 class="modal-title" id="myModalLabel">Mr Steven Hulamari</h4>
                     </div>
                     <div class="modal-body">
-                        Message goes here
+                        <p>
+                            <b>From the Chairman, appeal to all lead-
+                            ers and members to stay focused as we
+                            journey on towards the end of 2019.
+                            During the Lay Preachers pulpit ex-
+                            change we were not able to make it to
+                            Ramu UC because I was down with ma-
+                            laria. Be informed that this commitment
+                            will still be made at a later date.
+                            From the circuit, an appeal for continuing prayers for one of
+                            our serving minister Rev. Puri Lama. He needs proper medi-
+                            cal attention. He is now in the care of his immediate family
+                            members. Pray for Lama and Bulolo UC. TUC Boubou in on
+                            Sunday: 27th October 2019; so pray and prepare for our
+                            up-coming annual boubou.</b>
+                        </p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -353,6 +379,39 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="editorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">EDITOR’S SAY Sina Hanua Vetali</h4>
+                        </div>
+                        <div class="modal-body">
+                                From the editor’s corner I wish to apolo-
+                                gize to the leaders and members for
+                                some delays we have encountered in the
+                                months gone by, particularly by way of
+                                releasing our monthly Taraka Trumpet
+                                newsletter. Most often such setbacks are
+                                caused by inks running out fast and not
+                                able to reproduce enough copies for
+                                everyone. However, it’s been a real fun and joy trying to
+                                collect enough information for us to read, so we can be
+                                more informed of what’s happening in the Congregation,
+                                Circuit, Region and even at Assembly level. Please bear
+                                with us, only two more months of 2019 before us. Let’s
+                                keep praying and working together for God’s Glory.
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    
+                </div>
+            </div>
 
         <div class="modal fade" id="pastorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -363,7 +422,28 @@
                         <h4 class="modal-title" id="myModalLabel">Reverend Rau Vetali's Message</h4>
                     </div>
                     <div class="modal-body">
-                        Reverend's message will go here!!!
+                        <p>
+                            Listen! Wisdom is calling out In the streets and
+                            market places, calling loudly at the city gates
+                            and wherever people come together. Prov. 1:
+                            20-21
+                            Streets, market places, city gates and other
+                            avenues where people congregated together at
+                            that time , this proverb was calling on people to listen. Most of
+                            our traditional villages were oval shaped so every activity was
+                            monitored in the main arena. Today we live in villages, small
+                            stations, towns and cities. Every day people gather in shop
+                            fronts, streets, market places, shopping malls, sporting venues,
+                            airports, banks, hospitals etc... Wherever we may be in a day,
+                            WISDOM still calls on everyone of us to LISTEN. If we listen
+                            more and talk less, we will definitely hear wisdom speaking. We
+                            are called to listen, so that when things get out of hand we can
+                            be able to make the right decisions at any given situation or cir-
+                            cumstance. Wisdom is doing the right thing, saying the right
+                            things, turning in the right direction so that peace and harmony
+                            can rule and reign. May we all take time to listen for God to
+                            speak.
+                        </p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -378,31 +458,17 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        <h4 class="modal-title" id="myModalLabel">Executives</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail">
-                                    <img src="..." alt="...">
-                                    <div class="caption">
-                                        <h3>Chairman</h3>
-                                        <p>...</p>
-                                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#"
-                                                class="btn btn-default" role="button">Button</a></p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-danger">CHAIRMAN MR. STEVEN HULAMARI</a>
+                            <a href="#" class="list-group-item list-group-item-info">V/CHAIRMAN MR. EPHRAIM MODOBILA</a>
+                            <a href="#" class="list-group-item list-group-item-info">SECRETARY MR DAVID DOBUWATA</a>
+                            <a href="#" class="list-group-item list-group-item-info">MR. KOHU HENI</a>
+                            <a href="#" class="list-group-item list-group-item-success">TREASURER MRS. HEGGAI PENIAS</a>
+                            <a href="#" class="list-group-item list-group-item-info">V/TREASURER MRS. WESLIANNE NAPITALAI</a>
 
-                            <div class="thumbnail">
-                                <img src="..." alt="...">
-                                <div class="caption">
-                                    <h3>Vice Chairman</h3>
-                                    <p>...</p>
-                                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#"
-                                            class="btn btn-default" role="button">Button</a></p>
-                                </div>
-                            </div>
                         </div>
 
                     </div>
@@ -415,16 +481,70 @@
         </div>
     </div>
     </div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="slideshowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    <h4 class="modal-title" id="myModalLabel">Slideshow</h4>
                 </div>
                 <div class="modal-body">
-                    insert contents heres.....
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="imgs/prayer" alt="...">
+                                <div class="carousel-caption">
+                                    <h1>A child reading the bible</h1>
+                                    <p>How wonderful it is for children to grow up in the word of GOD</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="imgs/trumpet" alt="...">
+                                <div class="carousel-caption">
+                                    <h1>The Trumpet</h1>
+                                    <p>Come here to get toksaves</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                    <img src="imgs/tuc2.png" alt="...">
+                                    <div class="carousel-caption">
+                                        <h1>The Trumpet</h1>
+                                        <p>Come here to get toksaves</p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                        <img src="imgs/tuc3.png" alt="...">
+                                        <div class="carousel-caption">
+                                            <h1>The Trumpet</h1>
+                                            <p>Come here to get toksaves</p>
+                                        </div>
+                                    </div>
+                            ...
+                        </div>
+
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                            data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                            data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -442,6 +562,8 @@
                 H</a></p>
     </footer>
     </div>
+
+    <script src="js/geo.js"></script>
     <script src="app.js"></script>
 </body>
 
