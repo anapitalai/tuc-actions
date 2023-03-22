@@ -19,7 +19,7 @@ jobs:
     - name: Copy folder content recursively to remote VPS
       uses: garygrossgarten/github-action-scp@release
       with:
-          local: dist
+          local: ./
           remote: /var/www/www.taraka-uc.com/public_html/
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
