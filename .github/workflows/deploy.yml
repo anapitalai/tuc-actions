@@ -13,13 +13,13 @@ jobs:
         node-version: 18
     - name: Install dependencies
       run: npm ci
-    # - name: Run build
-    #   run: npm run build
+    - name: Run build
+      run: npm run build
 
     - name: Copy folder content recursively to remote VPS
       uses: garygrossgarten/github-action-scp@release
       with:
-          local: ./
+          local: dist
           remote: /var/www/www.taraka-uc.com/public_html/
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
