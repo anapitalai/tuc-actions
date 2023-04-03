@@ -115,6 +115,25 @@ document.querySelector('#app').innerHTML = `
                     </li>
                 </ul>
             </li>
+            <!-- Mens Corner -->
+            <li>
+                <div class="navList__subheading row row--align-v-center">
+                    <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
+                    <span class="navList__subheading-title">Mens Ministry Corner</span>
+                </div>
+                
+                <ul class="subList subList--hidden">
+                    <li class="subList__item">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                            data-target="#slideshowModal">
+                            <a class='btn btn-info btn-md' href="pdfs/mens_schedule.pdf">
+                                <p class="overviewCard-subtitle">Schedule</p>
+                            </a>
+                        </button>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </aside>
@@ -169,14 +188,18 @@ document.querySelector('#app').innerHTML = `
             </div>
         </div>
         <div class="overviewCard">
-            <div class="overviewCard-icon overviewCard-icon--calendar">
-                <i class="far fa-calendar-check"></i>
-            </div>
-            <div class="overviewCard-description">
-                <h3 class="overviewCard-title text-light">Upcoming <strong>Programs</strong></h3>
-                <p class="overviewCard-subtitle">Post here please</p>
-            </div>
+        <div class="overviewCard-icon overviewCard-icon--calendar">
+            <i class="far fa-calendar-check"></i>
         </div>
+        <div class="overviewCard-description">
+            <h3 class="overviewCard-title text-light">TUC Men's<strong> Ministry</strong></h3>
+            <p class="overviewCard-subtitle">Download  CCT Meet & Combine Schedule</p>                     
+
+            <a class='btn btn-info btn-md' href="pdfs/mens_schedule.pdf">
+                <p class="overviewCard-subtitle">Schedule</p>
+            </a>
+        </div>
+    </div>
 
         <div class="overviewCard">
             <div class="overviewCard-icon overviewCard-icon--photo">
@@ -443,11 +466,11 @@ document.querySelector('#app').innerHTML = `
             <div class="modal-body">
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-danger">CHAIRMAN MR. SAILAS KOPANA</a>
-                    <a href="#" class="list-group-item list-group-item-info">V/CHAIRLADY</a>
+                    <a href="#" class="list-group-item list-group-item-info">V/CHAIRLADY MRS ELIZABETH NAMALU</a>
                     <a href="#" class="list-group-item list-group-item-info">SECRETARY MISS TRISHA </a>
                     <a href="#" class="list-group-item list-group-item-info">V/SECRETARY MR. ALOIS NAPITALAI</a>
                     <a href="#" class="list-group-item list-group-item-success">TREASURER MRS. DOROTHY ILIAS</a>
-                    <a href="#" class="list-group-item list-group-item-info">V/TREASURER MRS. NAOMI</a>
+                    <a href="#" class="list-group-item list-group-item-info">V/TREASURER MS. NAOMI YANGI</a>
 
                 </div>
 
