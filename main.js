@@ -195,7 +195,7 @@ document.querySelector('#app').innerHTML = `
             <h3 class="overviewCard-title text-light">TUC Men's<strong> Ministry</strong></h3>
             <p class="overviewCard-subtitle">Download  CCT Meet & Combine Schedule</p>                     
 
-            <a class='btn btn-info btn-md' href="pdfs/trumpet-6.pdf">
+            <a class='btn btn-info btn-md' href="pdfs/mens_schedule.pdf">
                 <p class="overviewCard-subtitle">Schedule</p>
             </a>
         </div>
