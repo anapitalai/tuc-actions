@@ -119,7 +119,7 @@ document.querySelector('#app').innerHTML = `
             <li>
                 <div class="navList__subheading row row--align-v-center">
                     <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
-                    <span class="navList__subheading-title">Mens Ministry Corner</span>
+                    <span class="navList__subheading-title">Men's Ministry Corner</span>
                 </div>
                 
                 <ul class="subList subList--hidden">
@@ -127,7 +127,7 @@ document.querySelector('#app').innerHTML = `
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                             data-target="#slideshowModal">
-                            <a class='btn btn-info btn-md' href="pdfs/mens_schedule.pdf">
+                            <a class='btn btn-info btn-md' href="./pdfs/mens_schedule.pdf">
                                 <p class="overviewCard-subtitle">Schedule</p>
                             </a>
                         </button>
@@ -179,7 +179,7 @@ document.querySelector('#app').innerHTML = `
             </div>
             <div class="overviewCard-description">
                 <h3 class="overviewCard-title text-light"><strong><i>Current</i> Publication</strong></h3>
-                <a class='btn btn-info btn-md' href="pdfs/trumpet-6.pdf">
+                <a class='btn btn-info btn-md' href="./pdfs/trumpet-6.pdf">
                     <p class="overviewCard-subtitle">View It</p>
                 </a>
 
