@@ -119,7 +119,7 @@ document.querySelector('#app').innerHTML = `
             <li>
                 <div class="navList__subheading row row--align-v-center">
                     <span class="navList__subheading-icon"><i class="fas fa-users"></i></span>
-                    <span class="navList__subheading-title">Mens Ministry Corner</span>
+                    <span class="navList__subheading-title">Men's Ministry Corner</span>
                 </div>
                 
                 <ul class="subList subList--hidden">
